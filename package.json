@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "_comment": "the below line we have added so that we dont have to run the file by nodemon index,js but we can start it by npm start",
     "start":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
