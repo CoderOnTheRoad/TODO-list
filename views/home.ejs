@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div id="app_container">
+        <h1>TODO app</h1>
+        <form action="/task/create" method="post">
+            <div id="input-container">
+                <div id="input-container1">
+                    <div class="input">
+                        <label for="description" >DESCRIPTION</label>
+                        <input type="text" name="description" id="description" placeholder="WHAT DO YOU NEED TO DO?">
+                    </div>
+                </div>
+                <div id="input-container2">
+                    <div class="input">
+                        <label for="category">category</label>
+                        <select name="category" id="category" aria-placeholder="xyz">
+                            <option value="" selected> CHOOSE A CATEGORY</option>
+                            <option value="personal">personal</option>
+                            <option value="work">work</option>
+                            <option value="school">school</option>
+                            <option value="other">other</option>  
+                        </select>
+                    </div>
+                    <div class="input" style="border-left: 1px solid black; padding-left:10px ;">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                </div>
+            </div>
+            <div id="button-container">
+                <div class="button">
+                <button type="submit" style="background-color: black; color: white;"> ADD TASK </button>
+                <button style="background-color: brown;"> <a href="www.google.com">DELETE TASK</a></button>
+                </div>
+            </div>
+            
+        </form>
+        <div id="coutput-container">
+            <input type="checkbox" name="" id=""> abc
+
+        </div>
+    </div>
+</body>
+</html>

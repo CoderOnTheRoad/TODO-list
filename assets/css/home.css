@@ -1,0 +1,109 @@
+body{
+    background-color: gray;
+    margin: 0px;
+    border: 0px;
+}
+.input{
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    font-family: sans-serif;
+    position: relative;
+    left: 10px;
+}
+.input label{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.input input{
+    display: inline-block;
+    border: 0px;
+    width: 90%;
+    
+}
+.input input:focus{
+    outline: none;
+}
+
+#input-container1{
+    width: 100%;
+    height: 40%;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-top: 1px solid black;
+    border-bottom:1px solid black; ;
+}
+#input-container1 div{
+    width: 100%;
+    height: 100%;
+}
+#input-container2{
+    width: 100%;
+    height: 40%; 
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border-top: 1px solid black; */
+    border-bottom:1px solid black; ;
+}
+#input-container2 div{
+    width: 50%;
+    height: 100%;
+}
+#input-container{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#app_container{
+    background-color: white;
+    width: 70vw;
+    height: 80vh;
+    margin: auto;
+    text-align: center;
+    /* padding: 10px; */
+
+}
+
+#button-container{
+    width: 60vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    position: relative;
+    left: 5px;
+    border-bottom: 1px solid black;
+    
+
+}
+.button{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.button button{
+    /* border: 0px; */
+    width: 45%;
+    height: 80%;
+    /* margin-bottom: 10px; */
+}
+button a{
+    color:white;
+    text-decoration: none;
+}
