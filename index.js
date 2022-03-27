@@ -9,11 +9,6 @@ app.set("view engine","ejs");
 app.set("views","./views");
 //setiing folder from which static files are going to be accessed
 app.use(express.static("assets"));
-//use body perser to read the submitted data
-const bodyParser=require("body-parser");
-app.use(bodyParser.urlencoded({extended:false}));
-
-
 // ********run the express server on port**********
 app.listen(port,function(err){
     if(err){

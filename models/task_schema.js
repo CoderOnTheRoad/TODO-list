@@ -1,6 +1,6 @@
-const { text } = require("express");
+const express = require("express");
 const mongoose=require("mongoose");
-const task_Schema=new mongoose.Schema({
+const task_schema=new mongoose.Schema({
     task:{
         type:text,
         required:true,
@@ -18,6 +18,6 @@ const task_Schema=new mongoose.Schema({
     }
 });
 
-const Tasks=mongoose.model("Tasks",task_Schema);
+const Tasks=mongoose.model("Tasks",task_chema);
 module.export=Tasks;
 
