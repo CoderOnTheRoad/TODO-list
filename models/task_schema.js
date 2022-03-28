@@ -2,22 +2,22 @@ const express = require("express");
 const mongoose=require("mongoose");
 const task_schema=new mongoose.Schema({
     task:{
-        type:text,
+        type:String,
         required:true,
 
     },
     category:{
-        type:text,
+        type:String,
         required:true,
 
     },
     date:{
-        type:date,
-        required:true,
+        type:String,
+        required:false,
 
     }
 });
 
-const Tasks=mongoose.model("Tasks",task_chema);
-module.export=Tasks;
+const Tasks=mongoose.model("Tasks",task_schema);
+module.exports=Tasks;
 

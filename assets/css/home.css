@@ -31,13 +31,13 @@ body{
 
 #input-container1{
     width: 100%;
-    height: 40%;
+    height: 50%;
     /* padding: 10px; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border-top: 1px solid black;
-    border-bottom:1px solid black; ;
+    border-top: 1px solid grey;
+    border-bottom:1px solid grey; ;
 }
 #input-container1 div{
     width: 100%;
@@ -45,13 +45,13 @@ body{
 }
 #input-container2{
     width: 100%;
-    height: 40%; 
+    height: 50%; 
     /* padding: 10px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     /* border-top: 1px solid black; */
-    border-bottom:1px solid black; ;
+    border-bottom:1px solid grey; ;
 }
 #input-container2 div{
     width: 50%;
@@ -59,7 +59,7 @@ body{
 }
 #input-container{
     width: 100%;
-    height: 30vh;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,10 +69,15 @@ body{
 #app_container{
     background-color: white;
     width: 70vw;
-    height: 80vh;
+    height:auto;
     margin: auto;
     text-align: center;
     /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: space-between;
 
 }
 
@@ -86,7 +91,8 @@ body{
     margin: auto;
     position: relative;
     left: 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
+    margin-top: 30px;
     
 
 }
@@ -106,4 +112,61 @@ body{
 button a{
     color:white;
     text-decoration: none;
+}
+#output-container{
+    /* overflow-y: scroll; */
+    width: 100%;
+    height: 30%;
+}
+#output-list{
+    width: 60vw;
+    height: auto;
+    margin: auto;
+    padding-right: 10px;
+}
+#output-list li{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    
+}
+#output-list li input{
+    display: block;
+    width: 15%;
+}
+/* #output-list li span{
+    display: block;
+} */
+
+.task-and-date-container{
+    width: 60%;
+    height:100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.task-and-date-container span{
+    display: block;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+}
+.category-container{
+    width: 15%;
+    height: 80%;
+
+}
+.category-container span{
+    width: 100%;
+    height: 100%;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }

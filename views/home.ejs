@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/home.css">
+    
+
 </head>
 <body>
     <div id="app_container">
         <h1>TODO app</h1>
-        <form action="/task-create" method="post">
+        <form action="/task/create" method="post">
             <div id="input-container">
                 <div id="input-container1">
                     <div class="input">
@@ -29,7 +31,7 @@
                             <option value="other">other</option>  
                         </select>
                     </div>
-                    <div class="input" style="border-left: 1px solid black; padding-left:10px ;">
+                    <div class="input" style="border-left: 1px solid gray; padding-left:10px ;">
                         <label for="date">Date</label>
                         <input type="date" name="date" id="date">
                     </div>
@@ -37,16 +39,36 @@
             </div>
             <div id="button-container">
                 <div class="button">
-                <button type="submit" style="background-color: black; color: white;"> ADD TASK </button>
-                <button style="background-color: brown;"> <a href="www.google.com">DELETE TASK</a></button>
+                <button type="submit" style="background-color: black; color: white;"><i class="fa-solid fa-plus"></i> ADD TASK </button>
+                <button style="background-color: brown; color: white;"><i class="fa-solid fa-trash-can"></i> <a href="/task/delete?" id="delete-link">DELETE TASK</a></button>
                 </div>
             </div>
             
         </form>
-        <div id="coutput-container">
-            <input type="checkbox" name="" id=""> abc
+        <div id="output-container">
+            <ul id="output-list" style="list-style: none;">
+            <% for(let i of task_list){ %> 
+                <li>
+                    <input type="checkbox" name="<%=i._id%>" id="">
+                    <div class="task-and-date-container">
+                        <span class="task" style="font-size: large; font-weight: bolder;"><%=i.task%></span>
+                        <i class="fa-solid fa-calendar-days" style="width: 5%; height: 50%; text-align: left; font-size: small; color: gray;"></i>
+                        <span class="date" style="width: 50%; height: 50%; font-size: small; color: grey;">
+                        <%if(i.date==""){%>
+                            NO DUE DATE
+                        <%}else{%>
+                            <%=i.date%>
+                        <%}%></span>
+                    </div>
+                    <div class="category-container"><span><%=i.category%></span><div>
+                </li>
+            <% } %> 
+            </ul>
 
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/eeea8987ec.js" crossorigin="anonymous"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/task" method="post">\
+        <input type="text" name="description" id="description" placeholder="WHAT DO YOU NEED TO DO?">
+        <select name="category" id="category" aria-placeholder="xyz">
+            <option value="" selected> CHOOSE A CATEGORY</option>
+            <option value="personal">personal</option>
+            <option value="work">work</option>
+            <option value="school">school</option>
+            <option value="other">other</option>  
+        </select>
+        <input type="date" name="date" id="date">
+        <button type="submit">create</button>
+    </form>
+    
+</body>
+</html>
