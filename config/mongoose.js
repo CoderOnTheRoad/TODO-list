@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mongoose= require("mongoose");
 //search mongoose in google for the configuration
 mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/todoList");//created a database named todo-list and mongobd seever always runs on port 27017
