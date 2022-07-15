@@ -1,6 +1,7 @@
+require("dotenv").config();
 const express=require("express"); //adding express library 
 const app=express(); //fire up exress
-const port=8000; // port on which our website will run
+const port=process.env.PORT||3000; // port on which our website will run
 const db=require("./config/mongoose");
 const bodyParser=require("body-parser");
 app.use(bodyParser.urlencoded({extended:false}));
