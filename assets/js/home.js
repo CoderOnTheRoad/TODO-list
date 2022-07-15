@@ -39,13 +39,13 @@ for(let i of categories){
         });
     }
 }
+//deleting the data updating the deleteurl query*****************
 
-//deleting the data updating the deleteurl query******************
-var checkedItems=$("#output-list li input");
 // console.log(checkedItems);
 var linkKey=$("#delete-link");
 
 linkKey.on("click", function () {
+    var checkedItems=$("#output-list li input");
     for(let i of checkedItems){
         if(i.checked==true){
             linkKey.attr("href", linkKey.attr("href")+"_id="+i.name+"&");
