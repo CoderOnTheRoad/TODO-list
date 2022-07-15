@@ -19,6 +19,14 @@ module.exports.create=function(req,res){
 module.exports.delete=function(req,res){
     // const Tasks=require("../models/task_schema.js");
     var idArr=req.query._id;
+    if(typeof(idArr==String)){
+        Tasks.findByIdAndDelete(idArr,function(err){
+            if(err){
+                console.log("cant delete this item due to error");
+                return;
+            }
+        });
+    }else{
     console.log(idArr);
     for(let i of idArr){
         Tasks.findByIdAndDelete(i,function(err){
@@ -27,6 +35,7 @@ module.exports.delete=function(req,res){
                 return;
             }
         });
+    }
     }
     return res.redirect("/");
 
