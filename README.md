@@ -1,5 +1,5 @@
 # Taskmaker
-User can create task.
+User can create task and delete task.
 
 ## dependencies:
 mongoose, dotenv, ejs, express, nodemon, body-parser 
@@ -12,18 +12,14 @@ mongoose, dotenv, ejs, express, nodemon, body-parser
 - Heroku
 
 ## Features
-- Add multiple habits to track like reading a book, going to the gym etc
-- Multiple habits with sama nam can not be created (Case insensitive) e.g. If a habit with name "Gym" already exists you can nou create another habit with name "gym", "gYm", "gyM", "GYm", "gYM", "GyM" or "GYM".
-- Track each habit everyday. These are the 3 statuses of a habit:
-    - Done - Mark the habit as done for a day
-    - Not done - Mark the habit as not done for a day
-    - Un-marked - User did not take any action on a habit for a day
-- A view to show all current habits.
-- A view to display 7 days of each habit
-    - User can mark todays habit
-    - Previous 6 days and the status of that habit for each day
-    - A user can toggle between the three (above mentioned) statuses of a habit i.e. I can change today’s status as done, not done or none anytime.
-    - Also user can change any of the previous days status i.e. I can change the status of a habit for yesterday, day before yesterday or any previous 6 days as well
+- Add todo task.
+    - Add description of task
+    - Choose category of task personal, work, school and other.
+    - pick a date for the task
+    - add the task by clicking "ADD TASK" button.
+- Delete todo task
+    - select one task or multiple task
+    - click the "DELETE TASK" button to delete the task
 
 # Directory Structure
 
@@ -31,93 +27,71 @@ mongoose, dotenv, ejs, express, nodemon, body-parser
 ├── README.md
 ├── assets
 │   ├── css
-│   │   └── style.css
-│   ├── images
-│   │   ├── background1.jpg
-│   │   ├── background2.jpg
-│   │   ├── background3.jpg
-│   │   ├── favicon.ico
-│   │   └── icon.png
+│   │   └── home.css
 │   └── js
-│       ├── detailHabits.js
-│       └── home.js
+│       ├── home.js
+│       └── jquery.js
 ├── config
-│   ├── connectFlashMiddleware.js
 │   └── mongoose.js
 ├── controllers
-│   ├── habit_controller.js
 │   ├── home_controller.js
-│   └── user_controller.js
+│   └── task_controller.js
 ├── index.js
 ├── models
-│   ├── Habits.js
-│   └── Users.js
+│   └── task_schema.js
 ├── package-lock.json
 ├── package.json
-├── routers
-│   ├── habit.js
+├── routes
 │   ├── index.js
-│   └── user.js
+│   └── task.js
 └── views
-    ├── _footer.ejs
-    ├── _header.ejs
-    ├── detailHabits.ejs
     ├── home.ejs
-    └── layout.ejs
+    └── home2.ejs
 
 ```
 ## Features with details
 <ol>
- <li><h3>Login</h3>
+ <li><h3>ADD TASK</h3>
  <ul>
-    <li><h4>log in with valid email ID</h4>
-    <img src="./assets/images/login-screen-habito.jpg"/>
+    <li><h4>add description </h4>
+    <img src="./assets/images/add-description.jpg"/>
     </li>
-    <li><h4>shows invalid email notification if email id is invalid </h4>
-    <img src="./assets/images/invalid-email-screen-habito.jpg"/>
+    <li><h4>choose category </h4>
+    <img src="./assets/images/choose-category.jpg"/>
     </li>
-    <li><h4>view after login</h4>
-    <img src="./assets/images/login-view-habito.jpg"/>
+    <li><h4>select date</h4>
+    <img src="./assets/images/pick-date.jpg"/>
+    </li>
+    <li><h4>add task</h4>
+    <img src="./assets/images/add-task.jpg"/>
+    </li>
+    <li><h4>newly added task will be shown at the bottom of ADD Task and DELETE TASK button </h4>
+    <img src="./assets/images/added-task.jpg"/>
     </li>
  </ul>
  </li>
-  <li><h3>Habit creation</h3>
+  <li><h3>Delete or remove a task</h3>
  <ul>
-    <li><h4>Create new habit</h4>
-    <img src="./assets/images/add-new-habit.jpg"/>
-    </li>
-    <li><h4>newly added habit will be shown as a card where user can set status of the habit by picking a date </h4>
-    <img src="./assets/images/new-habit-card.jpg"/>
-    </li>
-    <li><h4>habit card options</h4>
-    <img src="./assets/images/habit-card-details.jpg"/>
-    </li>
-    <li><h4>habit name is case insensitive, user can't create habits with same name a notification will pop up saying this habit already exists </h4>
-    <img src="./assets/images/same-habit.jpg"/>
-    </li>
- </ul>
- </li>
-   <li><h3>Detail-view</h3>
- <ul>
-    <li><h4>Detail view of habits for a week</h4>
-    <img src="./assets/images/detail-view.jpg"/>
+    <li><h4>Delete singlr task or multiple task by selecting the checkbox before the tasks and clicking the delete button</h4>
+    <img src="./assets/images/delete-task.jpg"/>
     </li>
 
  </ul>
  </li>
+
 </ol>
 
   
 ## Git Clone
 To use this repository in your local system-
 
-<a href="https://github.com/CoderOnTheRoad/habito.git" target="_blank">https://github.com/CoderOnTheRoad/habito.git </a>
+<a href="https://github.com/CoderOnTheRoad/TODO-list" target="_blank">https://github.com/CoderOnTheRoad/TODO-list </a>
 
 or run this command in your GitHub CLI
 
-###### `gh repo clone CoderOnTheRoad/habito`
+###### `gh repo clone CoderOnTheRoad/TODO-list`
 <br>
 
 
 
-## <a href = "https://habito-habit-tracker.herokuapp.com/" target="_blank"> Demo / Hosted on - https://habito-habit-tracker.herokuapp.com/ </a>
+## <a href = "https://taskmaker-todo-app.herokuapp.com/" target="_blank"> Demo / Hosted on - https://taskmaker-todo-app.herokuapp.com/ </a>
